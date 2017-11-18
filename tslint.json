@@ -1,4 +1,416 @@
 {
+	"knownSymbols": {
+		"TodoIonicframeworkAppComponent": [
+			{
+				"name": "TodoIonicframeworkAppComponent",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\app.component.ts",
+				"type": "class",
+				"isDefault": false
+			}
+		],
+		"Component": [
+			{
+				"name": "Component",
+				"module": "@angular/core",
+				"isDefault": false
+			}
+		],
+		"EventEmitter": [
+			{
+				"name": "EventEmitter",
+				"module": "@angular/core",
+				"isDefault": false
+			}
+		],
+		"Output": [
+			{
+				"name": "Output",
+				"module": "@angular/core",
+				"isDefault": false
+			}
+		],
+		"ViewChild": [
+			{
+				"name": "ViewChild",
+				"module": "@angular/core",
+				"isDefault": false
+			}
+		],
+		"SplashScreen": [
+			{
+				"name": "SplashScreen",
+				"module": "@ionic-native/splash-screen",
+				"isDefault": false
+			}
+		],
+		"StatusBar": [
+			{
+				"name": "StatusBar",
+				"module": "@ionic-native/status-bar",
+				"isDefault": false
+			}
+		],
+		"Nav": [
+			{
+				"name": "Nav",
+				"module": "ionic-angular",
+				"isDefault": false
+			}
+		],
+		"Platform": [
+			{
+				"name": "Platform",
+				"module": "ionic-angular",
+				"isDefault": false
+			}
+		],
+		"TodoIonicframeworkAppModule": [
+			{
+				"name": "TodoIonicframeworkAppModule",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\app.module.ts",
+				"type": "class",
+				"isDefault": false
+			}
+		],
+		"FormsModule": [
+			{
+				"name": "FormsModule",
+				"module": "@angular/forms",
+				"isDefault": false
+			}
+		],
+		"ErrorHandler": [
+			{
+				"name": "ErrorHandler",
+				"module": "@angular/core",
+				"isDefault": false
+			}
+		],
+		"NgModule": [
+			{
+				"name": "NgModule",
+				"module": "@angular/core",
+				"isDefault": false
+			}
+		],
+		"Http": [
+			{
+				"name": "Http",
+				"module": "@angular/http",
+				"isDefault": false
+			}
+		],
+		"RequestOptions": [
+			{
+				"name": "RequestOptions",
+				"module": "@angular/http",
+				"isDefault": false
+			}
+		],
+		"HttpModule": [
+			{
+				"name": "HttpModule",
+				"module": "@angular/http",
+				"isDefault": false
+			}
+		],
+		"BrowserModule": [
+			{
+				"name": "BrowserModule",
+				"module": "@angular/platform-browser",
+				"isDefault": false
+			}
+		],
+		"AuthHttp": [
+			{
+				"name": "AuthHttp",
+				"module": "angular2-jwt",
+				"isDefault": false
+			}
+		],
+		"IonicApp": [
+			{
+				"name": "IonicApp",
+				"module": "ionic-angular",
+				"isDefault": false
+			}
+		],
+		"IonicErrorHandler": [
+			{
+				"name": "IonicErrorHandler",
+				"module": "ionic-angular",
+				"isDefault": false
+			}
+		],
+		"IonicModule": [
+			{
+				"name": "IonicModule",
+				"module": "ionic-angular",
+				"isDefault": false
+			}
+		],
+		"TodoIonicframeworkRoutes": [
+			{
+				"name": "TodoIonicframeworkRoutes",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\app.routes.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"platformBrowserDynamic": [
+			{
+				"name": "platformBrowserDynamic",
+				"module": "@angular/platform-browser-dynamic",
+				"isDefault": false
+			}
+		],
+		"TodoIonicframeworkModules": [
+			{
+				"name": "TodoIonicframeworkModules",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\todo\\index.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"TodoIonicframeworkComponents": [
+			{
+				"name": "TodoIonicframeworkComponents",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\todo\\index.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"TodoIonicframeworkShareds": [
+			{
+				"name": "TodoIonicframeworkShareds",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\todo\\index.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"TodoIonicframeworkServices": [
+			{
+				"name": "TodoIonicframeworkServices",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\todo\\index.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"TodoIonicframeworkPipes": [
+			{
+				"name": "TodoIonicframeworkPipes",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\todo\\index.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"BaseComponent": [
+			{
+				"name": "BaseComponent",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\todo\\base\\base-component\\base-component.component.ts",
+				"type": "class",
+				"isDefault": false
+			}
+		],
+		"Input": [
+			{
+				"name": "Input",
+				"module": "@angular/core",
+				"isDefault": false
+			}
+		],
+		"OnDestroy": [
+			{
+				"name": "OnDestroy",
+				"module": "@angular/core",
+				"isDefault": false
+			}
+		],
+		"OnInit": [
+			{
+				"name": "OnInit",
+				"module": "@angular/core",
+				"isDefault": false
+			}
+		],
+		"User": [
+			{
+				"name": "User",
+				"module": "@rucken/core",
+				"isDefault": false
+			}
+		],
+		"Subject": [
+			{
+				"name": "Subject",
+				"module": "rxjs/Subject",
+				"isDefault": false
+			}
+		],
+		"AccountPageComponent": [
+			{
+				"name": "AccountPageComponent",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\todo\\pages\\account-page\\account-page.component.ts",
+				"type": "class",
+				"isDefault": false
+			}
+		],
+		"NavController": [
+			{
+				"name": "NavController",
+				"module": "ionic-angular",
+				"isDefault": false
+			}
+		],
+		"NavParams": [
+			{
+				"name": "NavParams",
+				"module": "ionic-angular",
+				"isDefault": false
+			}
+		],
+		"AccountPageRoutes": [
+			{
+				"name": "AccountPageRoutes",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\todo\\pages\\account-page\\account-page.routes.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"AdminPageComponent": [
+			{
+				"name": "AdminPageComponent",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\todo\\pages\\admin-page\\admin-page.component.ts",
+				"type": "class",
+				"isDefault": false
+			}
+		],
+		"AdminPageRoutes": [
+			{
+				"name": "AdminPageRoutes",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\todo\\pages\\admin-page\\admin-page.routes.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"HomePageComponent": [
+			{
+				"name": "HomePageComponent",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\todo\\pages\\home-page\\home-page.component.ts",
+				"type": "class",
+				"isDefault": false
+			}
+		],
+		"HomePageRoutes": [
+			{
+				"name": "HomePageRoutes",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\todo\\pages\\home-page\\home-page.routes.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"LoginPageComponent": [
+			{
+				"name": "LoginPageComponent",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\todo\\pages\\login-page\\login-page.component.ts",
+				"type": "class",
+				"isDefault": false
+			}
+		],
+		"AccountService": [
+			{
+				"name": "AccountService",
+				"module": "@rucken/core",
+				"isDefault": false
+			}
+		],
+		"LoginPageRoutes": [
+			{
+				"name": "LoginPageRoutes",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\todo\\pages\\login-page\\login-page.routes.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"GroupsFrameComponent": [
+			{
+				"name": "GroupsFrameComponent",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\todo\\pages\\admin-page\\groups-frame\\groups-frame.component.ts",
+				"type": "class",
+				"isDefault": false
+			}
+		],
+		"GroupsFrameRoutes": [
+			{
+				"name": "GroupsFrameRoutes",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\todo\\pages\\admin-page\\groups-frame\\groups-frame.routes.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"UsersFrameComponent": [
+			{
+				"name": "UsersFrameComponent",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\todo\\pages\\admin-page\\users-frame\\users-frame.component.ts",
+				"type": "class",
+				"isDefault": false
+			}
+		],
+		"UsersFrameRoutes": [
+			{
+				"name": "UsersFrameRoutes",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\todo\\pages\\admin-page\\users-frame\\users-frame.routes.ts",
+				"type": "const",
+				"isDefault": false
+			}
+		],
+		"AuthHttpFactory": [
+			{
+				"name": "AuthHttpFactory",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\todo\\shared\\factories\\auth-http.factory.ts",
+				"type": "class",
+				"isDefault": false
+			}
+		],
+		"AuthConfig": [
+			{
+				"name": "AuthConfig",
+				"module": "angular2-jwt",
+				"isDefault": false
+			}
+		],
+		"IonicAccountService": [
+			{
+				"name": "IonicAccountService",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\todo\\shared\\services\\account.service.ts",
+				"type": "class",
+				"isDefault": false
+			}
+		],
+		"Injectable": [
+			{
+				"name": "Injectable",
+				"module": "@angular/core",
+				"isDefault": false
+			}
+		],
+		"EndpointHelper": [
+			{
+				"name": "EndpointHelper",
+				"module": "@rucken/core",
+				"isDefault": false
+			}
+		],
+		"IRoute": [
+			{
+				"name": "IRoute",
+				"path": "c:\\Projects\\open-sources\\@rucken\\todo-ionicframework\\src\\app\\todo\\shared\\interfaces\\route.interface.ts",
+				"type": "interface",
+				"isDefault": false
+			}
+		]
+	}
+}{
   "rules": {
     "no-duplicate-variable": true,
     "no-unused-variable": [

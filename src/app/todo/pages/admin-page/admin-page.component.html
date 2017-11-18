@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{page?.data?.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-tabs>
+    <div *ngFor="let frame of frames">
+      <ion-tab [tabIcon]="frame?.data?.icon" [tabTitle]="frame?.data?.title" [root]="frame?.component"></ion-tab>
+    </div>
+  </ion-tabs>
+</ion-content>

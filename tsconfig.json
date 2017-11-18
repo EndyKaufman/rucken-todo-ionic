@@ -1,17 +1,33 @@
 {
   "compilerOptions": {
+    "importHelpers": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "noEmitHelpers": false,
+    "noImplicitAny": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "stripInternal": true,
     "allowSyntheticDefaultImports": true,
-    "declaration": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "lib": [
-      "dom",
-      "es2015"
+      "es6",
+      "dom"
     ],
-    "module": "es2015",
+    "suppressImplicitAnyIndexErrors": true,
+    "types": [
+      "jasmine",
+      "webpack"
+    ],
+    "module": "es6",
     "moduleResolution": "node",
-    "sourceMap": true,
-    "target": "es5"
+    "target": "es5",
+    "typeRoots": [
+      "./node_modules/@types"
+    ]
   },
   "include": [
     "src/**/*.ts"

@@ -1,30 +1,42 @@
-import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
+import { Component, EventEmitter, Output, ViewChild, Injector } from '@angular/core';
 import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar';
+import { Nav, Platform } from 'ionic-angular';
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
+import { TodoIonicframeworkRoutes } from './app.routes';
+import { IRoute } from './todo/shared/interfaces/route.interface';
+import { BaseComponent } from './todo/base/base-component/base-component.component';
+import { ModalController } from 'ionic-angular';
+import { AlertModalComponent } from './todo/modals/alert-modal/alert-modal.component';
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'app.component.html',
+  entryComponents: [AlertModalComponent],
 })
-export class MyApp {
-  @ViewChild(Nav) nav: Nav;
+export class TodoIonicframeworkAppComponent extends BaseComponent {
 
-  rootPage: any = HomePage;
+  @ViewChild(Nav)
+  nav: Nav;
+  @Output()
+  onChangePage: EventEmitter<IRoute> = new EventEmitter<IRoute>();
+  pages: IRoute[] = TodoIonicframeworkRoutes;
+  rootPage: any;
 
-  pages: Array<{title: string, component: any}>;
-
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(
+    public injector: Injector,
+    public platform: Platform,
+    public statusBar: StatusBar,
+    public splashScreen: SplashScreen,
+    public modalCtrl: ModalController
+  ) {
+    super(injector)
     this.initializeApp();
-
-    // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
-    ];
-
+  }
+  afterCreate() {
+    super.afterCreate();
+    // You need this small hack in order to catch application root view container ref
+    this.app.viewContainerRef = this.viewContainerRef;
+    this.app.component = this;
   }
 
   initializeApp() {
@@ -33,12 +45,22 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
+      this.openPage(this.pages[0]);
     });
   }
-
-  openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
+  openPage(page: IRoute) {
     this.nav.setRoot(page.component);
+    this.onChangePage.emit(page);
+  }
+  showErrorModal(options: any) {
+    let modal = this.modalCtrl.create(AlertModalComponent, options);
+    modal.present();
+    
+  }
+  showInfoModal(options: any) {
+    //alert(message);
+  }
+  showContentModal(options:any) {
+    //alert(content);
   }
 }

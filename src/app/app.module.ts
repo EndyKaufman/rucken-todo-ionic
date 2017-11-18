@@ -1,34 +1,54 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { ErrorHandler, NgModule } from '@angular/core';
+import { Http, RequestOptions, HttpModule } from '@angular/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { StatusBar } from '@ionic-native/status-bar';
+import {
+  AccountService,
+  AppService,
+  EndpointHelper,
+  HttpHelper,
+  RepositoryHelper,
+  RuckenCoreServices,
+  ThemesService,
+} from '@rucken/core';
+import { AuthHttp } from 'angular2-jwt';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+import { TodoIonicframeworkAppComponent } from './app.component';
+import { TodoIonicframeworkComponents } from './todo/index';
+import { IonicAccountService } from './todo/shared/services/account.service';
+import { AuthHttpFactory } from './todo/shared/factories/auth-http.factory';
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage,
-    ListPage
+    TodoIonicframeworkAppComponent,
+    ...TodoIonicframeworkComponents
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
+    HttpModule,
+    FormsModule,
+    IonicModule.forRoot(TodoIonicframeworkAppComponent),
   ],
   bootstrap: [IonicApp],
   entryComponents: [
-    MyApp,
-    HomePage,
-    ListPage
+    TodoIonicframeworkAppComponent,
+    ...TodoIonicframeworkComponents
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    RuckenCoreServices,
+    { provide: ThemesService, useClass: ThemesService },
+    { provide: AppService, useClass: AppService },
+    { provide: AccountService, useClass: IonicAccountService },
+    { provide: AuthHttp, useFactory: AuthHttpFactory.create, deps: [Http, RequestOptions] },
+    { provide: EndpointHelper, useClass: EndpointHelper },
+    { provide: RepositoryHelper, useClass: RepositoryHelper },
+    { provide: HttpHelper, useClass: HttpHelper },
+    { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
-export class AppModule {}
+export class TodoIonicframeworkAppModule { }

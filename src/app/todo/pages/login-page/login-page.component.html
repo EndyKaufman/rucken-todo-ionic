@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>{{page?.data?.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="user">
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="user.username" [placeholder]="modelMeta.titles.username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" [(ngModel)]="user.password" [placeholder]="modelMeta.titles.password"></ion-input>
+    </ion-item>
+    <div padding>
+      <button ion-button color="primary" (click)="login()" block>Login</button>
+    </div>
+  </ion-list>
+</ion-content>
