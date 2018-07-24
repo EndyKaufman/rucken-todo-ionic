@@ -6,6 +6,7 @@ import { Subject } from 'rxjs/Subject';
 import { AppService } from '@rucken/core/shared/services/app.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Injector } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'base-component',
@@ -34,7 +35,7 @@ export class BaseComponent implements OnInit, OnDestroy {
 
     accountService: AccountService;
     app: AppService;
-    // translateService: TranslateService;
+    translateService: TranslateService;
     sanitizer: DomSanitizer;
 
     constructor(
@@ -43,6 +44,7 @@ export class BaseComponent implements OnInit, OnDestroy {
         this.accountService = injector.get(AccountService);
         this.app = injector.get(AppService);
         this.sanitizer = injector.get(DomSanitizer);
+        this.translateService = injector.get(TranslateService);
       }
 
     get errorMessage(): any {

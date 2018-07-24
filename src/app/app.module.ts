@@ -20,6 +20,7 @@ import { TodoIonicframeworkAppComponent } from './app.component';
 import { TodoIonicframeworkComponents } from './todo/index';
 import { IonicAccountService } from './todo/shared/services/account.service';
 import { AuthHttpFactory } from './todo/shared/factories/auth-http.factory';
+import { TranslateModule, TranslateLoader, TranslateFakeLoader } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,9 @@ import { AuthHttpFactory } from './todo/shared/factories/auth-http.factory';
     BrowserModule,
     HttpModule,
     FormsModule,
+    TranslateModule.forRoot({
+      loader: { provide: TranslateLoader, useClass: TranslateFakeLoader }
+    }),
     IonicModule.forRoot(TodoIonicframeworkAppComponent),
   ],
   bootstrap: [IonicApp],

@@ -1,13 +1,11 @@
 import { BaseComponent } from './base/base-component/base-component.component';
 export { BaseComponent } from './base/base-component/base-component.component';
-import { AlertModalComponent } from './modals/alert-modal/alert-modal.component';
-export { AlertModalComponent } from './modals/alert-modal/alert-modal.component';
-import { ConfirmModalComponent } from './modals/confirm-modal/confirm-modal.component';
-export { ConfirmModalComponent } from './modals/confirm-modal/confirm-modal.component';
-import { AuthHttpFactory } from './shared/factories/auth-http.factory';
-export { AuthHttpFactory } from './shared/factories/auth-http.factory';
+import { BaseModalComponent } from './base/base-modal/base-modal.component';
+export { BaseModalComponent } from './base/base-modal/base-modal.component';
 import { IRoute } from './shared/interfaces/route.interface';
 export { IRoute } from './shared/interfaces/route.interface';
+import { AuthHttpFactory } from './shared/factories/auth-http.factory';
+export { AuthHttpFactory } from './shared/factories/auth-http.factory';
 import { IonicAccountService } from './shared/services/account.service';
 export { IonicAccountService } from './shared/services/account.service';
 import { AccountPageComponent } from './pages/account-page/account-page.component';
@@ -30,13 +28,12 @@ import { GroupsFrameComponent } from './pages/admin-page/groups-frame/groups-fra
 export { GroupsFrameComponent } from './pages/admin-page/groups-frame/groups-frame.component';
 import { GroupsFrameRoutes } from './pages/admin-page/groups-frame/groups-frame.routes';
 export { GroupsFrameRoutes } from './pages/admin-page/groups-frame/groups-frame.routes';
-import { UsersFrameRoutes } from './pages/admin-page/users-frame/users-frame.routes';
-export { UsersFrameRoutes } from './pages/admin-page/users-frame/users-frame.routes';
 import { UsersFrameComponent } from './pages/admin-page/users-frame/users-frame.component';
 export { UsersFrameComponent } from './pages/admin-page/users-frame/users-frame.component';
+import { UsersFrameRoutes } from './pages/admin-page/users-frame/users-frame.routes';
+export { UsersFrameRoutes } from './pages/admin-page/users-frame/users-frame.routes';
 export const TodoIonicframeworkModules: any[] = [];
-export const TodoIonicframeworkComponents: any[] = [AlertModalComponent, ConfirmModalComponent, AccountPageComponent, HomePageComponent, LoginPageComponent, AdminPageComponent, GroupsFrameComponent, UsersFrameComponent];
+export const TodoIonicframeworkComponents: any[] = [AccountPageComponent, HomePageComponent, LoginPageComponent, AdminPageComponent, GroupsFrameComponent, UsersFrameComponent];
 export const TodoIonicframeworkShareds: any[] = [AuthHttpFactory, AccountPageRoutes, HomePageRoutes, LoginPageRoutes, AdminPageRoutes, GroupsFrameRoutes, UsersFrameRoutes];
 export const TodoIonicframeworkServices: any[] = [IonicAccountService];
 export const TodoIonicframeworkPipes: any[] = [];
-

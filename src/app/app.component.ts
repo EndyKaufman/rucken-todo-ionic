@@ -7,11 +7,12 @@ import { TodoIonicframeworkRoutes } from './app.routes';
 import { IRoute } from './todo/shared/interfaces/route.interface';
 import { BaseComponent } from './todo/base/base-component/base-component.component';
 import { ModalController } from 'ionic-angular';
-import { AlertModalComponent } from './todo/modals/alert-modal/alert-modal.component';
+import { AlertController } from 'ionic-angular/components/alert/alert-controller';
+import { translate } from '@rucken/core/shared/common/utils';
+import { Alert } from 'ionic-angular';
 
 @Component({
-  templateUrl: 'app.component.html',
-  entryComponents: [AlertModalComponent],
+  templateUrl: 'app.component.html'
 })
 export class TodoIonicframeworkAppComponent extends BaseComponent {
 
@@ -27,7 +28,7 @@ export class TodoIonicframeworkAppComponent extends BaseComponent {
     public platform: Platform,
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
-    public modalCtrl: ModalController
+    public alertCtrl: AlertController
   ) {
     super(injector)
     this.initializeApp();
@@ -52,15 +53,92 @@ export class TodoIonicframeworkAppComponent extends BaseComponent {
     this.nav.setRoot(page.component);
     this.onChangePage.emit(page);
   }
-  showErrorModal(options: any) {
-    let modal = this.modalCtrl.create(AlertModalComponent, options);
-    modal.present();
-    
+  showErrorModal(options: any): Alert {
+    const message = options.message ? options.message : '';
+    const title = this.translateService.instant(options.title ? options.title : translate('Error'));
+    const buttons: any[] = [];
+    options.onOk = options.onOk ? options.onOk : (data: any) => { };
+    if (options.onOk) {
+      buttons.push({
+        text: this.translateService.instant(options.okTitle ? options.okTitle : translate('OK')),
+        handler: (data: any) => {
+          options.onOk(data);
+        }
+      })
+    }
+    if (options.onClose) {
+      buttons.push({
+        text: this.translateService.instant(options.closeTitle ? options.closeTitle : translate('OK')),
+        handler: (data: any) => {
+          options.onClose(data);
+        }
+      })
+    }
+    const alert = this.alertCtrl.create({
+      title: title,
+      message: message,
+      buttons: buttons
+    });
+    alert.present();
+    return alert;
   }
   showInfoModal(options: any) {
-    //alert(message);
+    const message = options.message ? options.message : '';
+    const title = this.translateService.instant(options.title ? options.title : translate('Info'));
+    const buttons: any[] = [];
+    options.onOk = options.onOk ? options.onOk : (data: any) => { };
+    if (options.onOk) {
+      buttons.push({
+        text: this.translateService.instant(options.okTitle ? options.okTitle : translate('OK')),
+        handler: (data: any) => {
+          options.onOk(data);
+        }
+      })
+    }
+    if (options.onClose) {
+      buttons.push({
+        text: this.translateService.instant(options.closeTitle ? options.closeTitle : translate('OK')),
+        handler: (data: any) => {
+          options.onClose(data);
+        }
+      })
+    }
+    const alert = this.alertCtrl.create({
+      title: title,
+      message: message,
+      buttons: buttons
+    });
+    alert.present();
+    return alert;
   }
-  showContentModal(options:any) {
-    //alert(content);
+  showConfirmModal(options: any) {
+    const message = options.message ? options.message : '';
+    const title = this.translateService.instant(options.title ? options.title : translate('Info'));
+    const buttons: any[] = [];
+    options.onOk = options.onOk ? options.onOk : (data: any) => { };
+    options.onClose = options.onClose ? options.onClose : (data: any) => { };
+    if (options.onOk) {
+      buttons.push({
+        text: this.translateService.instant(options.okTitle ? options.okTitle : translate('OK')),
+        handler: (data: any) => {
+          options.onOk(true, data);
+        }
+      })
+    }
+    if (options.onClose) {
+      buttons.push({
+        text: this.translateService.instant(options.closeTitle ? options.closeTitle : translate('OK')),
+        handler: (data: any) => {
+          options.onOk(false, data);
+        }
+      })
+    }
+    const alert = this.alertCtrl.create({
+      title: title,
+      message: message,
+      buttons: buttons
+    });
+    alert.present();
+    return alert;
   }
 }

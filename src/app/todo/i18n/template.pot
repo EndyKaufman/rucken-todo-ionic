@@ -9,3 +9,6 @@ msgstr ""
 
 msgid "Close"
 msgstr ""
+
+msgid "Info"
+msgstr ""
